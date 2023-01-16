@@ -1,5 +1,4 @@
-# FROM node:lts-alpine
-FROM alpine:3.16
+FROM node:lts-alpine
 
 # RUN apk add --no-cache git python2 build-base
 RUN apk add --no-cache git python3 build-base
