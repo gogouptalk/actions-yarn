@@ -1,6 +1,6 @@
-FROM alpine:3.16
+FROM node:lts-alpine
 
-ENV NODE_VERSION 18.13.0
+# ENV NODE_VERSION 18.13.0
 # RUN apk add --no-cache git python2 build-base
 RUN apk add --no-cache --virtual .build-deps-full \
         binutils-gold \
