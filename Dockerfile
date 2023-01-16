@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .build-deps-full \
         libgcc \
         linux-headers \
         make \
-        python3 \
+        python3
 RUN npm i -g --force yarn
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
