@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-RUN apk add python3
+RUN apk add python2
 RUN apk add --no-cache git python2 build-base
 RUN npm i -g --force yarn
 COPY "entrypoint.sh" "/entrypoint.sh"
