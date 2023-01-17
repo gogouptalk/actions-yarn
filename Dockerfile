@@ -12,6 +12,10 @@ RUN apk add --no-cache --virtual .build-deps-full \
         make \
         python3
 RUN npm i -g --force yarn
+RUN apk update
+RUN apk add apt-get
+RUN apt-get install sudo
+
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
 USER 1000:1000
