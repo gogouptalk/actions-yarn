@@ -18,8 +18,8 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 
   chmod 0600 "$NPM_CONFIG_USERCONFIG"
 fi
-echo "current user: $USER"
-sh -c "sudo chown -R runner /github"
-sh -c "sudo chmod -R 777 /github"
+echo "current user: ${USER}"
+sh -c "chown -R runner /github"
+sh -c "chmod -R 777 /github"
 sh -c "yarn $*"
 
