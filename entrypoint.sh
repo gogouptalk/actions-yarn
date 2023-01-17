@@ -20,4 +20,5 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 
 sh -c "yarn $*"
-sudo chmod -R 777 /github
+sh -c "sudo chown -R 1000:1000 /github"
+sh -c "sudo chmod -R 777 /github"
