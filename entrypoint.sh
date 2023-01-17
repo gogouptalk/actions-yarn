@@ -21,7 +21,7 @@ fi
 echo `id -u`
 echo `whoami`
 # apt-get install sudo
-sh -c "sudo chown -R $(whoami) /github"
-sh -c "sudo chmod -R 777 /github"
+# sh -c "sudo chown -R $(whoami) /github"
+# sh -c "sudo chmod -R 777 /github"
 sh -c "yarn $*"
 
