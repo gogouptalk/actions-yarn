@@ -21,6 +21,6 @@ fi
 echo `id -u`
 echo `whoami`
 # sh -c "sudo chown -R 1000:1000 /github"
-sh -c "chmod -R 777 /github"
+sudo sh -c "chmod -R 777 /github"
 sh -c "yarn $*"
 
