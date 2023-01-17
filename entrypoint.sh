@@ -23,5 +23,5 @@ sh -c "yarn $*"
 echo "current user: $USER"
 echo `id -u`
 echo `whoami`
-# sh -c "sudo chown -R 1000:1000 /github"
-# sh -c "sudo chmod -R 777 /github"
+sh -c "sudo chown -R runner /github"
+sh -c "sudo chmod -R 777 /github"
