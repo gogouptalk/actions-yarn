@@ -1,7 +1,16 @@
 FROM alpine:3.17
 
 ENV NODE_VERSION 18.13.0
-
+RUN apk add --no-cache --virtual .build-deps-full \
+        binutils-gold \
+        g++ \
+        gcc \
+        gnupg \
+        libgcc \
+        linux-headers \
+        make \
+        python3
+        
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
