@@ -90,7 +90,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   # smoke test
   && yarn --version
 
-COPY entrypoint.sh /usr/local/bin/
+COPY entrypoint.sh "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD [ "node" ]
+CMD [ "help" ]
