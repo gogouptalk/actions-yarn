@@ -20,7 +20,8 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 echo `id -u`
 echo `whoami`
-# sh -c "sudo chown -R 1000:1000 /github"
-# sudo sh -c "chmod -R 777 /github"
-sh -c "npm $*"
+apt-get install sudo
+sh -c "sudo chown -R $(whoami) /github"
+sh -c "sudo chmod -R 777 /github"
+sh -c "yarn $*"
 
